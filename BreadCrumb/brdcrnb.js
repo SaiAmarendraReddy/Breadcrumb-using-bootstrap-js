@@ -51,7 +51,6 @@ page.addEventListener("change", function () {
             nxtsblinings[i].classList.remove("active");
             nxtsblinings[i].removeAttribute("class");
             nxtsblinings[i].remove();
-            nxtsblinings.shift();
         }
 
 
