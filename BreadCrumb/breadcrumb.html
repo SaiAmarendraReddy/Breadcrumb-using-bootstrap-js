@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>BreadCrumb dynamic</title>
+    <style>
+        div#head{
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+        }
+        div#brdcrmb{
+            background-color: lightgoldenrodyellow;
+        }
+        div#dspPage{
+            background-color: lightgray;
+            text-align: center;
+            color: mediumblue;
+            font-size: 50px;
+            height: 200px;
+        }
+        nav{
+            --bs-breadcrumb-divider: "/";
+        }
+    </style>
+</head>
+<body>
+    <!-- container display heading -->
+    <div class="container" id="head">
+        <h1>BreadCrumb</h1>
+        <!-- dropdown -->
+        <select name="drop" id="dropdown">
+            <option value="Home">Home</option>
+            <option value="Mail">Mail</option>
+            <option value="Contact">Contact</option>
+            <option value="Address">Address</option>
+        </select>
+    </div>
+    <!-- indication of current page -->
+    <div class="container" id="brdcrmb">
+        <!-- nav element add an attribute "aria-label="breadcrumb""-->
+        <nav aria-label="breadcrumb">
+            <!-- create ol or ul list and add class="breadcrumb" -->
+            <ul class="breadcrumb" id="brdcrb">
+                <!-- create li and add class="breadcrumb-item","active" and also add attribute aria-current="page"-->
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ul>
+        </nav>
+    </div>
+    <!-- testing to display the web page -->
+    <div class="container" id="dspPage">
+        This is <span id="test">Home</span> Page
+    </div>
+    
+    <!-- script for breadcrumb.js -->
+    <script src="./brdcrnb.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
